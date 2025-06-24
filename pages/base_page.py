@@ -2,8 +2,6 @@ import allure
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions
-from locators.locators import MainLocators
-import time
 
 
 class BasePage:
@@ -20,6 +18,14 @@ class BasePage:
     @allure.step('Поиск элемента')
     def find_element_with_wait(self, locator):
         WebDriverWait(self.driver, 10).until(
+            expected_conditions.visibility_of_element_located(locator))
+        return self.driver.find_element(*locator)
+
+
+
+    @allure.step('Поиск элемента')
+    def find_element_in_modal_window(self, locator):
+        WebDriverWait(self.driver, 40).until(
             expected_conditions.visibility_of_element_located(locator))
         return self.driver.find_element(*locator)
 
@@ -59,6 +65,5 @@ class BasePage:
     def hover_over_element(self, locator):
         element = self.find_element_with_wait(locator)
         action = ActionChains(self.driver).move_to_element(element).click()
-        # time.sleep(2)
         action.perform()
 
