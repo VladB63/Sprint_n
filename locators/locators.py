@@ -48,12 +48,6 @@ class MainLoc:
     INFO_TARIF_TALKATIVE = By.XPATH, '//div[@class="tcard active"]/button[@data-for="tariff-card-3"]'
     INFO_TARIF_COMFORTING = By.XPATH, '//div[@class="tcard active"]/button[@data-for="tariff-card-4"]'
     INFO_TARIF_GLOSSY = By.XPATH, '//div[@class="tcard active"]/button[@data-for="tariff-card-5"]'
-    # INFO_TARIF_WORKING = By.XPATH, '//*[@class="tcard active"]//*[contains(@class, "i-button")]'
-    # INFO_TARIF_SLEEPY = By.XPATH, '//*[@class="tcard active"]//*[contains(@class, "i-button")]'
-    # INFO_TARIF_VACATION = By.XPATH, '//*[@class="tcard active"]//*[contains(@class, "i-button")]'
-    # INFO_TARIF_TALKATIVE = By.XPATH, '//*[@class="tcard active"]//*[contains(@class, "i-button")]'
-    # INFO_TARIF_COMFORTING = By.XPATH, '//*[@class="tcard active"]//*[contains(@class, "i-button")]'
-    # INFO_TARIF_GLOSSY = By.XPATH, '//*[@class="tcard active"]//*[contains(@class, "i-button")]'
 
 
     MODAL_INFO_WORKING = By.XPATH, '//*[@id="tariff-card-0" and contains(@class, "show")]'
